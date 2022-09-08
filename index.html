@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/forca.png" type="image/x-icon">
+
+    <title>Jogo da Forca</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="https://www.alura.com.br" class="logo" target="_blank">
+                <img src="img/logo.png" alt="Logo da Alura">
+            </a>
+        </h1>
+    </header>
+
+    <main>
+        <section id="menu-principal">
+            <div class="botoes">
+                <button id="iniciar">
+                    Começar a jogar
+                </button>
+                <button id="adicionarpalavra">
+                    Adicionar nova palavra
+                </button>
+            </div>
+        </section>
+
+
+        <!--Seção para adicionar nova palavra-->
+        <section id="adicionar-palavra" class="invisivel">
+            <textarea name="entrada-texto" id="entrada-texto" placeholder="Digite uma palavra" maxlength="8"></textarea>
+            <p>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/box-important--v1.png" class="icon1"/>
+                Máx. de 8 letras
+            </p>
+            <div class="botoes-adicionar">
+                <button id="salvar">
+                    Salvar e Começar
+                </button>
+                <button id="cancelar">
+                    Cancelar
+                </button>
+            </div>
+        </section>
+
+        <!--Tabuleiro-->
+        <section id="tabuleiro" class="invisivel">
+            <div class="quadro">
+                <canvas width="350" height="400"></canvas>
+            </div>
+
+            <ul id="lista"></ul>
+            <div id="div-letras" class="div-letras">
+                <div class="tecladoL1">
+                    <button class="btn-letras" id="0" value="Q">Q</button>
+                    <button class="btn-letras" id="1" value="W">W</button>
+                    <button class="btn-letras" id="2" value="E">E</button>
+                    <button class="btn-letras" id="3" value="R">R</button>
+                    <button class="btn-letras" id="4" value="T">T</button>
+                    <button class="btn-letras" id="5" value="Y">Y</button>
+                    <button class="btn-letras" id="6" value="U">U</button>
+                    <button class="btn-letras" id="7" value="I">I</button>
+                    <button class="btn-letras" id="8" value="O">O</button>
+                    <button class="btn-letras" id="9" value="P">P</button>
+                </div>
+                <div class="tecladoL2">
+                    <button class="btn-letras" id="10" value="A">A</button>
+                    <button class="btn-letras" id="11" value="S">S</button>
+                    <button class="btn-letras" id="12" value="D">D</button>
+                    <button class="btn-letras" id="13" value="F">F</button>
+                    <button class="btn-letras" id="14" value="G">G</button>
+                    <button class="btn-letras" id="15" value="H">H</button>
+                    <button class="btn-letras" id="16" value="J">J</button>
+                    <button class="btn-letras" id="17" value="K">K</button>
+                    <button class="btn-letras" id="18" value="L">L</button>
+                </div>
+                <div class="tecladoL3">
+                    <button class="btn-letras" id="19" value="Z">Z</button>
+                    <button class="btn-letras" id="20" value="X">X</button>
+                    <button class="btn-letras" id="21" value="C">C</button>
+                    <button class="btn-letras" id="22" value="V">V</button>
+                    <button class="btn-letras" id="23" value="B">B</button>
+                    <button class="btn-letras" id="24" value="N">N</button>
+                    <button class="btn-letras" id="25" value="M">M</button>
+                    <button class="btn-letras" id="26" value="Z">Z</button>
+                </div>
+            </div>
+            <div class="letrasErradas">
+                <h2>Letras Erradas:</h2>
+            </div>
+        </section>
+        <div class="popup-wrapper invisivel">
+            <div class="popup">
+                <div class="popup-containner">
+                    <h2 id="mensagemFim">Parabéns</h2>
+                    <div class="botoes-adicionar">
+                        <button id="novoJogo">
+                            Novo jogo
+                        </button>
+                        <button id="desistir">
+                            Desistir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Desenvolvido por Juliana Silva</p>
+        <div class="icones">
+            <a href="https://www.linkedin.com/in/juliana-cristina-da-silva/" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/linkedin.png" />
+            </a>
+
+            <a href="https://github.com/juliana-silva-hub" target="_blank">
+                <img src="https://img.icons8.com/material-sharp/48/000000/github.png" />
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="forca.js" defer></script>
+</body>
+
+</html>
